@@ -347,9 +347,9 @@ Key F3 W M Iconify
 Key F3 I M Iconify 
 Key F4 W M Close 
 Key F11 S C Exec exec xlock -mode swarm &
-Key s A C Exec xterm -geometry 193x35+0+2 -sl 1024 +ut -fg white &
-key x A C Exec xterm -geometry 180x11+14+563 -sl 5000 +ut -fg white &
-key w A C Exec dillo &
+Key q A M Exec xterm -geometry 193x35+0+2 -sl 1024 +ut -fg white &
+key e A M Exec xterm -geometry 180x11+14+563 -sl 5000 +ut -fg white &
+key w A M Exec surf -s https://google.com &
 Key a A M Desk 0 0
 Key s A M Desk 0 1
 Key d A M Desk 0 2
