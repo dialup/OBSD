@@ -109,7 +109,7 @@ Plug 'jimenezrick/vimerl'
 " go
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " haskell
 "" Haskell Bundle
@@ -837,11 +837,16 @@ set updatetime=100
 set autowrite
 map .n :cnext<CR>
 map .p :cprevious<CR>
-nnoremap .a :cclose<CR>
 
 nmap .. :GoBuild<CR>
 nmap .r :GoRun<CR>
 
+nnoremap .a :cclose<CR>
+
+" gocode
+set completeopt=menu
+
+
 " Tab buffer skip
-map <TAB> :bn<CR>
+"map <TAB> :bn<CR>
 
