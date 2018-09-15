@@ -828,25 +828,3 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-
-" gitgutter
-let g:gitgutter_grep=''
-set updatetime=100
-
-" golang 
-set autowrite
-map .n :cnext<CR>
-map .p :cprevious<CR>
-
-nmap .. :GoBuild<CR>
-nmap .r :GoRun<CR>
-
-nnoremap .a :cclose<CR>
-
-" gocode
-set completeopt=menu
-
-
-" Tab buffer skip
-"map <TAB> :bn<CR>
-
