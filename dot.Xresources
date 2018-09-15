@@ -9,12 +9,14 @@ XTerm*ScrollBar: false
 XTerm*antialias:          true
 XTerm*autohint:           true
 XTerm*cursorColor:  grey
+Xterm*cursorBlink:  true
 XTerm.vt100.geometry:   193x35+0+2
 XTerm*saveLines:    100000
 XTerm*faceName:     BitStream Vera Sans Mono
 XTerm*toolBar:      off
 XTerm*loginShell:   True
 XTerm*selectToClipboard: true
+Xterm*vt100.blink: false
 
 XTerm*highlightSelection: true
 XTerm*utf-8: 1
