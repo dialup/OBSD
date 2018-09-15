@@ -15,13 +15,13 @@ set updatetime=100
 
 " golang 
 set autowrite
-map .n :cnext<CR>
-map .p :cprevious<CR>
+map /n :cnext<CR>
+map /p :cprevious<CR>
 
-nmap .. :GoBuild<CR>
-nmap .r :GoRun<CR>
+nmap // :GoBuild<CR>
+nmap /r :GoRun<CR>
 
-nnoremap .c :cclose<CR>
+nnoremap /c :cclose<CR>
 
 " gocode
 set completeopt=menu
