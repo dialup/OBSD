@@ -1,0 +1,33 @@
+" vim-bootstrap b990cad
+
+"*****************************************************************************
+"   mv archive generate.vim
+"       % mv generate.vim ~/.vimrc
+"   install plugins use command
+"       "% vim +PlugInstall +qall
+"*****************************************************************************
+"" Vim-PLug core
+"*****************************************************************************
+
+" gitgutter
+let g:gitgutter_grep=''
+set updatetime=100
+
+" golang 
+set autowrite
+map /n :cnext<CR>
+map /p :cprevious<CR>
+
+nmap // :GoBuild<CR>
+nmap /r :GoRun<CR>
+
+nnoremap /c :cclose<CR>
+
+" gocode
+set completeopt=menu
+
+
+" Tab buffer skip
+"map <TAB> :bn<CR>
+
+" tmux
