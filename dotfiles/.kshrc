@@ -22,12 +22,8 @@ alias c='clear'
 alias lg='lazygit'
 
 #alias hugo='/home/dialup/www/hugo'
-alias start='hugo --buildDrafts server -t casper'
 
-alias g='cd /home/dialup/git/head/golang/go'
-alias h='cd /home/dialup/git/head'
 
-alias vultr='ssh dialup@45.76.80.74 -p 895'
 
 
 
