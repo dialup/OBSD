@@ -1,0 +1,117 @@
+! $OpenBSD: dot.Xdefaults,v 1.3 2014/07/10 10:22:59 jasper Exp $
+! (: 2018
+XTerm*locale: true
+XTerm*faceSize: 9,5
+XTerm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+XTerm*termName: xterm-color
+XTerm*eightBitInput: false
+XTerm*ScrollBar: false
+XTerm*antialias:          true
+XTerm*autohint:           true
+XTerm*cursorColor:  grey
+XTerm*cursorBlink:  true
+XTerm.vt100.geometry:   193x35+0+2
+XTerm*saveLines:    100000
+XTerm*faceName:     BitStream Vera Sans Mono
+XTerm*toolBar:      off
+XTerm*loginShell:   True
+XTerm*selectToClipboard: true
+XTerm*highlightSelection: true
+XTerm*utf-8: true
+
+!Xterm.vt100.blink: true
+
+!*VT100*translations: #override Shift <Btn1Up>: exec-formatted("google-chrome '%t'", PRIMARY)
+!XTerm*printerCommand: xterm -T History -e sh -c 'less -r <&3' 3<&0
+!XTerm*translations: #override Ctrl <Key>slash: print-everything()
+XTerm*VT100.translations: #override  \n\
+    None <Key>F7:   insert-selection(CLIPBOARD) \n\
+    None <Key>F8:   select-cursor-start()       \n\
+    None <Key>F9:   select-cursor-end(CLIPBOARD)\n\
+    None <Key>F10:  select-cursor-extend()
+XTerm*bellIsUrgent: true
+
+
+!RED Tag
+!#define _color1        #B40431
+#define _color1        #e89393
+#define _color9        #e89393
+!GRN SpecialKey
+#define _color2        #9ece9e
+#define _color10       #9ece9e
+!YEL Keyword
+#define _color3        #f0dfaf
+#define _color11       #f0dfaf
+!BLU Number
+#define _color4        #2E2EFE
+!#define _color4        #8cd0d3
+#define _color12       #8cd0d3
+!MAG Precondit
+#define _color5        #c0bed1
+#define _color13       #c0bed1
+!CYN Float
+#define _color6        #dfaf8f
+#define _color14       #dfaf8f
+!WHT Search
+#define _color7        #efefef
+#define _color15       #efefef
+!FMT Include, StatusLine, ErrorMsg
+#define _colorBD       #ffcfaf
+#define _colorUL       #ccdc90
+#define _colorIT       #80d4aa
+.Xdefaults: unmodified: line 1
+!TXT Normal, Normal, Cursor
+#define _foreground    white
+#define _background    #1f1f1f
+!#define _cursorColor   #000000
+XTerm*foreground     : _foreground
+XTerm*background     : _background
+#define _cursorColor   #8faf9f
+
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+*background: #002b36
+*foreground: #657b83
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3

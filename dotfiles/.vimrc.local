@@ -1,0 +1,318 @@
+"*****************************************************************************
+"   mv archive generate.vim
+"       % mv generate.vim ~/.vimrc
+"   install plugins use command
+"       "% vim +PlugInstall +qall
+"*****************************************************************************
+" cursorline
+set cursorline
+
+" gitgutter
+let g:gitgutter_grep=''
+set updatetime=100
+
+" golang 
+set autowrite
+"map /n :cnext<CR>
+"map /p :cprevious<CR>
+"nmap // :GoBuild<CR>
+"nmap /r :GoRun<CR>
+"nnoremap /c :cclose<CR>
+
+" gocode
+set completeopt=menu
+
+" Tab buffer skip
+"map <TAB> :bn<CR>
+
+" NERDTree
+let g:NERDTreeWinSize = 30
+
+"let g:acp_completeoptPreview = 1
+
+" scrool off
+set scrolloff=999
+
+" C,C++
+"set rtp+=/usr/local/bin/egdb
+
+" Theme airline
+let g:airline_theme='minimalist'
+
+"================================
+" Common Configuration for Vim
+"================================
+set encoding=utf-8      " utf-8 default  (others: big5, gbk, euc-jp)
+set fencs=utf-8,big5    " fileencodings: utf-8 default (others:gbk,ucs-bom)
+"set showcmd
+"set noshowmode          " not show `Insert,Normal` at bottom left
+"set wildmenu
+set number              " Show line number
+set relativenumber      " Show relative line number
+set cursorline          " Show underline in current cursor
+"set cursorcolumn        " Show highlight in current column
+"set nowrap              " not wrap the long line
+"set colorcolumn=80      " Display the limit of text width.
+"set textwidth=79        " Restrict text width.
+"set mouse=a             " Enable mouse to use (all mode)
+"set scrolloff=2         " Keep space from top and bottom
+"set laststatus=2        " Alway show status bar at bottom
+
+""" Tab setting
+"set tabstop=4           " Tab key indents X spaces at a time
+"set softtabstop=4       " makes the spaces feel like real tabs
+"set shiftwidth=4        " X spaces indents
+"set expandtab           " Use spaces when the <Tab> key is pressed"
+" could use `:retab!` to reformat code to use tabs instead of space.
+
+""" Folding Setting
+"set foldmethod=indent   " allow us fold on indent
+"set foldlevel=99        " don't fold by default.
+"nnoremap <Space> za    " conflict with current map key.
+
+""" Searching and Pattens
+"set hlsearch        " Highlight search by default.
+"set smarttab        " handle tab more intelligently.
+"set incsearch       " search pattern when still typing
+"nnoremap <Leader><CR> :noh<CR>
+
+" don't backup
+"set nobackup
+"set nowb
+"set noswapfile
+
+" don't redraw while executing macros (good performance config)
+"set lazyredraw
+
+" System Clipboard
+"set clipboard=unnamed
+
+"colorscheme monokai "atom-dark-256
+
+" For Python (already as default)
+"au BufNewFile,BufRead *.py
+"    \ set tabstop=4
+"    \ set softtabstop=4
+"    \ set shiftwidth=4
+"    \ set textwidth=79
+"    \ set expandtab
+"    \ set autoindent
+"    \ set fileformat=unix
+
+" For ROS cpp coding style
+"map \R <Esc>:set expandtab shiftwidth=2 tabstop=2 softtabstop=2<CR>
+" use `:retab!` for reformatting
+
+" add additional (testing) plug-in
+"source ~/.vim/plugin/pyextend.vim
+
+" configure tags - add additional tags
+" source:  (will replaced by YCM later)
+" http://vim.wikia.com/wiki/C%2B%2B_code_completion
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/gl
+"set tags+=~/.vim/tags/sdl
+"set tags+=~/.vim/tags/qt4
+" build tags of your own project with Ctrl-F12
+"map <C-F12> :!ctags -R --sort=yes --c++-kinds=+pl --fields=+iaS --extra=+q --exclude=.git .<CR>
+" TODO: let F12 do ctags -R .   when filetype is not cpp
+"
+"Options:
+
+    let g:neodbg_debugger              = 'gdb'           " gdb,pdb,lldb
+    let g:neodbg_gdb_path              = '/usr/local/bin/egdb'  " gdb path
+    let g:neodbg_cmd_prefix            = 'GDB'           " default command prefix
+    let g:neodbg_console_height        = 25              " gdb console buffer hight, Default: 15
+    let g:neodbg_openbreaks_default    = 1               " Open breakpoints window, Default: 1
+    let g:neodbg_openstacks_default    = 0               " Open stackframes window, Default: 0
+    let g:neodbg_openthreads_default   = 0               " Open threads window, Default: 0
+    let g:neodbg_openlocals_default    = 1               " Open locals window, Default: 1
+    let g:neodbg_openregisters_default = 0               " Open registers window, Default: 0
+
+"Keymaps:
+
+"    let g:neodbg_keymap_toggle_breakpoint  = '<F9>'         " toggle breakpoint on current line
+"    let g:neodbg_keymap_next               = '<F10>'        " next
+"    let g:neodbg_keymap_run_to_cursor      = '<C-F10>'      " run to cursor (tb and c)
+"    let g:neodbg_keymap_jump               = '<C-S-F10>'    " set next statement (tb and jump)
+"    let g:neodbg_keymap_step_into          = '<F11>'        " step into
+"    let g:neodbg_keymap_step_out           = '<S-F11>'      " setp out
+"    let g:neodbg_keymap_continue           = '<F5>'         " run or continue
+"    let g:neodbg_keymap_print_variable     = '<C-P>'        " view variable under the cursor
+"    let g:neodbg_keymap_stop_debugging     = '<S-F5>'       " stop debugging (kill)
+    let g:neodbg_keymap_toggle_console_win = '<F6>'         " toggle console window
+"    let g:neodbg_keymap_terminate_debugger = '<C-C>'        " terminate debugger
+" ===== Plugin Management ===== {{{
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+"--------------
+"" IDE features
+"--------------
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'humiaozuzu/TabBar'
+"Plugin 'majutsushi/tagbar'
+"Plugin 'mileszs/ack.vim'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'Lokaltog/vim-powerline'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'w0rp/ale'
+"Plugin 'bronson/vim-trailing-whitespace'
+"Plugin 'vim-scripts/Conque-GDB'
+"Plugin 'Shougo/vimproc'
+"Plugin 'rip-rip/clang_complete'
+"Plugin 'vim-vdebug/vdebug'
+"Plugin 'gilligan/vim-lldb'
+"call vundle#end()           " required
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Also could use `:scriptnames` to check what plugins have loaded
+" Put your non-Plugin stuff after this line
+" ===== End of Plugin Management ==== }}}
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
+"-----------------
+"" Plugin settings
+"-----------------
+
+"" If system setting are correct and intall font from powerline {{{
+"" may not this following symbol setting
+"=========================================
+" unicode symbols
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = '':
+
+"let g:airline_symbols.space = '"\ua0"
+"set fillchars+=stl:\ ,stlnc:\          " if see ^^^^^ in the statusline
+"========================================= }}}
+
+"set t_Co=256        " show more color for airline
+"let g:airline_theme='murmur'    " change theme of airline 'wombot'
+
+" enable tabline
+"let g:ne#extensions#tabline#enabled = 1
+" set left separator
+"let g:airline#extensions#tabline#left_sep = ' '
+" set left separator which are not editting
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+" show buffer number
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+
+
+" ConqueGDB Setting
+"let g:ConqueTerm_Color=2            " 1: strip color after 200 line, 2: always with color
+"let g:ConqueTerm_CloseOnEnd=1       " close conque when program ends running
+"let g:ConqueTerm_StartMessages=0    " display warning message if conqueTerm is configed incorrect
+
+
+" set Background color: #FDF6E3 #002b36(dark)
+" set Text color:       #839496 #657b83(dark)
+" set Color-palette to Tango (temp)
+
+
+"" Syntastic Setting {{{
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_cpp_compiler = 'clang++'
+"let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+"
+"let g:syntastic_mode_map = {
+"    \ "mode": "passive",
+"    \ "active_filetypes" : ["cpp", "javascript", "html"],
+"    \ "passive_filetypes" : ["ruby"
+" }}}
+
+"" source: https://github.com/ervandew/supertab/issues/99
+"let g:SuperTabDefaultCompletionType = 'context'
+"let g:SuperTabContextDefaultCompletionType = "<C-P>"
+"let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+"let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<C-X><C-O>"]
+"autocmd FileType *
+"            \ if &omnifunc != '' |
+"            \ call SuperTabChain(&omnifunc, "<C-]>") |
+"            \ call SuperTabSetDefaultCompletionType("<C-X><C-P>") |
+"            \ endif
+""let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
+""let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
+""let g:SuperTabRetainCompletionType=2
+
+" cpp-enhanced-highlight setting
+
+"nmap <Leader>r <Plug>(quickrun)    " conflic GDB setting?
+
+" Toggle YCM
+
+" Enables folder icon highlighting using exact match
+"let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+
+"===============================
+" Hotkey Setting
+"
+" You can use following command to check if ohter plugin already use it.
+" example -> :verbose imap <tab>
+"===============================
+" -------------------- {{{
+" I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
+" A quick way from Insert to Normal (also can use <C-[> )
+
+                                "    paste mode, where you can paste mass data
+                                "    that won't be autoindented
+
+" disbale paste mode when leaving insert mode
+
+" Smart way to move between windows
+
+" Automatically jump to end of text you pasted:
+
+" Hit `Enter` to go to end of file, and Hit `Backspace` to go to beginning of file.
+
+" Type `<Space>o` to open a new file:
+"nnoremap <Leader>o :CtrlP<CR> " need CrtlP plug-in or :FZF<CR>
+
+" Type `<Space>w` to save file
+
+" Remove trailing whitespaces
+
+" --------------------  }}}
+
+" Single line comment depend on the type of file.
+

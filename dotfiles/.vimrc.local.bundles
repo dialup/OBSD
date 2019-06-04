@@ -1,0 +1,19 @@
+"Plug 'Shougo/deoplete.nvim'
+"Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+"Plug 'jodosha/vim-godebug'
+"
+"Plug 'yuratomo/dbg.vim/'
+"Plug 'junegunn/gv.vim'
+
+"C,C++
+Plug 'cpiger/NeoDebug'
+"Plug 'dbgx/gdb.vim'
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
+" Install nightly build, replace ./install.sh with install.cmd on windows
+"Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+" Or install latest release tag
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+" Or build from source code
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
